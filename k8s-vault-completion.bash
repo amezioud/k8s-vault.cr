@@ -61,7 +61,7 @@ _k8svault_completion()
     ;;
   esac
 }
-if [[ $(type -t compopt) = "builtin" ]]; then
+if [[ $(type compopt) = "builtin" ]]; then
   complete -o default -F  _k8svault_completion k8s-vault
 else
   complete -o default -o nospace -F  _k8svault_completion k8s-vault
